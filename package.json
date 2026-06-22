@@ -1,0 +1,23 @@
+{
+  "name": "property-templates",
+  "private": true,
+  "scripts": {
+    "dev:cms": "turbo dev --filter=@property/cms",
+    "dev:modern": "turbo dev --filter=@property/modern",
+    "dev:luxury": "turbo dev --filter=@property/luxury",
+    "dev:classic": "turbo dev --filter=@property/classic",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "db:push": "turbo db:push --filter=@property/db",
+    "db:generate": "turbo db:generate --filter=@property/db",
+    "db:migrate": "turbo db:migrate --filter=@property/db",
+    "db:seed": "turbo db:seed --filter=@property/db"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0"
+  },
+  "packageManager": "pnpm@10.33.2",
+  "pnpm": {
+    "onlyBuiltDependencies": ["@blawness/admin-kit", "esbuild", "sharp"]
+  }
+}
