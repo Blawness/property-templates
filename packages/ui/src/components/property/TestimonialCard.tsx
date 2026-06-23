@@ -25,10 +25,11 @@ export function TestimonialCard({ testimonial, className }: TestimonialCardProps
           </div>
           <div>
             <p className="font-medium">{testimonial.clientName}</p>
-            <div className="flex gap-0.5">
+            <div className="flex gap-0.5" aria-label={`Rating: ${testimonial.rating} out of 5 stars`}>
               {Array.from({ length: 5 }, (_, i) => (
                 <Star
                   key={i}
+                  aria-hidden="true"
                   className={cn("size-3.5", i < testimonial.rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300")}
                 />
               ))}

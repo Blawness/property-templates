@@ -16,6 +16,7 @@ export function VirtualTourEmbed({ url, className }: VirtualTourEmbedProps) {
           className="absolute inset-0 h-full w-full"
           allowFullScreen
           loading="lazy"
+          sandbox="allow-scripts allow-same-origin allow-popups"
         />
       </div>
     </div>

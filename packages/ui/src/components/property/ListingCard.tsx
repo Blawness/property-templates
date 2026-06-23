@@ -36,23 +36,23 @@ export function ListingCard({ listing, className, basePath = "" }: ListingCardPr
           <p className="text-lg font-bold">{formatPrice(listing.price)}</p>
           <h3 className="line-clamp-1 font-medium">{listing.title}</h3>
           <p className="text-muted-foreground flex items-center gap-1 text-sm">
-            <MapPin className="size-3.5" />
+            <MapPin className="size-3.5" aria-hidden="true" />
             {listing.city}
           </p>
           <div className="text-muted-foreground flex items-center gap-4 text-sm">
             {listing.bedrooms != null && (
               <span className="flex items-center gap-1">
-                <Bed className="size-3.5" /> {listing.bedrooms}
+                <Bed className="size-3.5" aria-hidden="true" /> {listing.bedrooms}
               </span>
             )}
             {listing.bathrooms != null && (
               <span className="flex items-center gap-1">
-                <Bath className="size-3.5" /> {listing.bathrooms}
+                <Bath className="size-3.5" aria-hidden="true" /> {listing.bathrooms}
               </span>
             )}
             {listing.buildingArea != null && (
               <span className="flex items-center gap-1">
-                <Maximize className="size-3.5" /> {listing.buildingArea}m²
+                <Maximize className="size-3.5" aria-hidden="true" /> {listing.buildingArea}m²
               </span>
             )}
           </div>

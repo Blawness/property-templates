@@ -14,6 +14,7 @@ export function MapEmbed({ embedUrl, className }: MapEmbedProps) {
         className="h-[400px] w-full"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+        sandbox="allow-scripts allow-same-origin allow-popups"
       />
     </div>
   );

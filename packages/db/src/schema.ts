@@ -57,7 +57,7 @@ export const listings = pgTable("listings", {
   index("listings_status_idx").on(table.status),
   index("listings_template_idx").on(table.template),
   index("listings_city_idx").on(table.city),
-  index("listings_slug_idx").on(table.slug),
+  index("listings_agent_id_idx").on(table.agentId),
 ]);
 
 export const testimonials = pgTable("testimonials", {
@@ -87,7 +87,7 @@ export const articles = pgTable("articles", {
 }, (table) => [
   index("articles_status_idx").on(table.status),
   index("articles_template_idx").on(table.template),
-  index("articles_slug_idx").on(table.slug),
+  index("articles_author_id_idx").on(table.authorId),
 ]);
 
 export const siteSettings = pgTable("site_settings", {
@@ -120,4 +120,5 @@ export const inquiries = pgTable("inquiries", {
 }, (table) => [
   index("inquiries_template_idx").on(table.template),
   index("inquiries_status_idx").on(table.status),
+  index("inquiries_listing_id_idx").on(table.listingId),
 ]);
