@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+@source "../../packages/ui/src/**/*.{tsx,ts}";
 
 @theme {
   --color-primary: #1e3a5f;
