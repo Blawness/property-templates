@@ -1,6 +1,6 @@
 import { db } from "../index.js";
 import { listings, agents } from "../schema.js";
-import { eq, and, or, ilike, gte, lte, sql } from "drizzle-orm";
+import { eq, and, or, ilike, gte, lte, sql, desc } from "drizzle-orm";
 
 export async function getListings(filters: {
   template: string; status?: string; type?: string; category?: string;
@@ -34,7 +34,7 @@ export async function getListings(filters: {
     .from(listings)
     .leftJoin(agents, eq(listings.agentId, agents.id))
     .where(and(...conditions))
-    .orderBy(listings.isFeatured, listings.createdAt)
+    .orderBy(desc(listings.isFeatured), desc(listings.createdAt))
     .limit(filters.limit ?? 12)
     .offset(filters.offset ?? 0);
 }
@@ -62,7 +62,7 @@ export async function getFeaturedListings(template: string, limit = 6) {
       eq(listings.status, "available"),
       eq(listings.isFeatured, true)
     ))
-    .orderBy(listings.createdAt)
+    .orderBy(desc(listings.createdAt))
     .limit(limit);
 }
 
