@@ -13,7 +13,7 @@ interface MortgageCalculatorProps {
 }
 
 export function MortgageCalculator({ propertyPrice, className }: MortgageCalculatorProps) {
-  const price = typeof propertyPrice === "string" ? parseFloat(propertyPrice) : propertyPrice;
+  const price = (typeof propertyPrice === "string" ? parseFloat(propertyPrice) : propertyPrice) || 0;
   const [dpPercent, setDpPercent] = useState(20);
   const [tenor, setTenor] = useState(15);
   const [interestRate, setInterestRate] = useState(7.5);
@@ -53,7 +53,7 @@ export function MortgageCalculator({ propertyPrice, className }: MortgageCalcula
               min={10}
               max={90}
               value={dpPercent}
-              onChange={(e) => setDpPercent(Number(e.target.value))}
+              onChange={(e) => setDpPercent(Math.max(10, Math.min(90, Number(e.target.value))))}
             />
           </div>
           <div className="space-y-1">
@@ -64,7 +64,7 @@ export function MortgageCalculator({ propertyPrice, className }: MortgageCalcula
               min={1}
               max={30}
               value={tenor}
-              onChange={(e) => setTenor(Number(e.target.value))}
+              onChange={(e) => setTenor(Math.max(1, Math.min(30, Number(e.target.value))))}
             />
           </div>
           <div className="space-y-1">
@@ -76,7 +76,7 @@ export function MortgageCalculator({ propertyPrice, className }: MortgageCalcula
               max={20}
               step={0.1}
               value={interestRate}
-              onChange={(e) => setInterestRate(Number(e.target.value))}
+              onChange={(e) => setInterestRate(Math.max(0, Math.min(20, Number(e.target.value))))}
             />
           </div>
         </div>
