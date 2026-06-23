@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+@theme {
+  --color-primary: #1e3a5f;
+  --color-primary-foreground: oklch(0.98 0 0);
+  --color-secondary: oklch(0.92 0.02 120);
+  --color-secondary-foreground: oklch(0.15 0.02 120);
+  --color-background: oklch(0.985 0.005 90);
+  --color-foreground: oklch(0.15 0.02 260);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.15 0.02 260);
+  --color-muted: oklch(0.96 0.005 90);
+  --color-muted-foreground: oklch(0.5 0.01 120);
+  --color-border: oklch(0.85 0.005 90);
+  --color-input: oklch(0.85 0.005 90);
+  --color-accent: oklch(0.94 0.02 100);
+  --color-accent-foreground: oklch(0.15 0.02 260);
+  --color-destructive: oklch(0.45 0.15 25);
+  --color-destructive-foreground: oklch(0.98 0 0);
+  --color-ring: oklch(0.3 0.05 260);
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Lora", serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
