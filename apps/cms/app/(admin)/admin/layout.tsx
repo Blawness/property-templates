@@ -1,6 +1,5 @@
 import { AdminLayout } from "@blawness/admin-kit/shell";
 import { requireUser } from "@blawness/admin-kit/auth-helpers";
-import { Home, Building2, Users, MessageSquare, Star, FileText, Settings, Image, UserRound } from "lucide-react";
 import type { NavItem } from "@blawness/admin-kit/shell/sidebar";
 
 const navItems: NavItem[] = [
