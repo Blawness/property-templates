@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@source "../node_modules/@blawness/admin-kit/src/**/*.{tsx,ts}";
+
+@theme {
+  --color-navy: #0f172a;
+  --color-brand: #06b6d4;
+  --color-gold: #f59e0b;
+}
