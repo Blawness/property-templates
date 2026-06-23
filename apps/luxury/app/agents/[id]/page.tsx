@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
-import { fetchAgentById } from "@/lib/data";
-import { getListingsByAgent } from "@property/db/queries/listings";
+import { fetchAgentById, fetchListingsByAgent } from "@/lib/data";
 import { AgentCard, ListingGrid } from "@property/ui";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
@@ -14,7 +13,7 @@ export default async function AgentDetailPage({ params }: { params: Promise<{ id
   const agent = await fetchAgentById(Number(id));
   if (!agent) notFound();
 
-  const agentListings = await getListingsByAgent(agent.id, "luxury");
+  const agentListings = await fetchListingsByAgent(agent.id);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
