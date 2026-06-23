@@ -1,6 +1,6 @@
 import { drizzle, type PostgresJsDatabase } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
-import * as schema from "./schema.js";
+import * as schema from "./schema";
 
 let _db: PostgresJsDatabase<typeof schema> | null = null;
 
@@ -19,4 +19,4 @@ export const db = new Proxy({} as PostgresJsDatabase<typeof schema>, {
 });
 
 export { schema };
-export * from "./schema.js";
+export * from "./schema";

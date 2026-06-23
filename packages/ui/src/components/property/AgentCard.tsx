@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail } from "lucide-react";
-import { cn } from "../../lib/utils.js";
-import type { Agent } from "../../types.js";
-import { Card, CardContent } from "../ui/card.js";
-import { Badge } from "../ui/badge.js";
+import { cn } from "../../lib/utils";
+import type { Agent } from "../../types";
+import { Card, CardContent } from "../ui/card";
+import { Badge } from "../ui/badge";
 
 interface AgentCardProps {
   agent: Agent;

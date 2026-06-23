@@ -1,5 +1,5 @@
-import { db } from "../index.js";
-import { articles, users } from "../schema.js";
+import { db } from "../index";
+import { articles, users } from "../schema";
 import { and, eq, or, desc } from "drizzle-orm";
 
 export async function getPublishedArticles(template: string, limit = 12, offset = 0) {

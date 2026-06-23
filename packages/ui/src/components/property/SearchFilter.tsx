@@ -3,17 +3,17 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useRef, useTransition } from "react";
 import { Search, X } from "lucide-react";
-import { cn } from "../../lib/utils.js";
-import type { SearchFilters } from "../../types.js";
-import { Button } from "../ui/button.js";
-import { Input } from "../ui/input.js";
+import { cn } from "../../lib/utils";
+import type { SearchFilters } from "../../types";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../ui/select.js";
+} from "../ui/select";
 
 interface SearchFilterProps {
   cities: string[];

@@ -1,6 +1,6 @@
-import { cn } from "../../lib/utils.js";
-import type { Listing } from "../../types.js";
-import { ListingCard } from "./ListingCard.js";
+import { cn } from "../../lib/utils";
+import type { Listing } from "../../types";
+import { ListingCard } from "./ListingCard";
 
 interface ListingGridProps {
   listings: Listing[];

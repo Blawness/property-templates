@@ -1,5 +1,5 @@
-import { db } from "../index.js";
-import { inquiries } from "../schema.js";
+import { db } from "../index";
+import { inquiries } from "../schema";
 import { eq, desc } from "drizzle-orm";
 
 export async function createInquiry(data: {

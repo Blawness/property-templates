@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
-import { cn } from "../../lib/utils.js";
-import type { Testimonial } from "../../types.js";
-import { Card, CardContent } from "../ui/card.js";
+import { cn } from "../../lib/utils";
+import type { Testimonial } from "../../types";
+import { Card, CardContent } from "../ui/card";
 
 interface TestimonialCardProps {
   testimonial: Testimonial;

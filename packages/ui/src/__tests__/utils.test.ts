@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { formatPrice, slugify, cn } from "../lib/utils.js";
+import { formatPrice, slugify, cn } from "../lib/utils";
 
 describe("formatPrice", () => {
   it("formats numeric string as IDR currency", () => {

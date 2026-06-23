@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { cn } from "../../lib/utils.js";
-import { Separator } from "../ui/separator.js";
+import { cn } from "../../lib/utils";
+import { Separator } from "../ui/separator";
 
 interface FooterProps {
   siteName: string;

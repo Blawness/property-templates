@@ -3,9 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { cn } from "../../lib/utils.js";
-import { Button } from "../ui/button.js";
-import { Dialog, DialogContent } from "../ui/dialog.js";
+import { cn } from "../../lib/utils";
+import { Button } from "../ui/button";
+import { Dialog, DialogContent } from "../ui/dialog";
 
 interface PropertyGalleryProps {
   images: string[];

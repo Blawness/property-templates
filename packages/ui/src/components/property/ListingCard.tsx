@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Bed, Bath, Maximize, MapPin } from "lucide-react";
-import { cn, formatPrice } from "../../lib/utils.js";
-import type { Listing } from "../../types.js";
-import { Card, CardContent } from "../ui/card.js";
-import { Badge } from "../ui/badge.js";
+import { cn, formatPrice } from "../../lib/utils";
+import type { Listing } from "../../types";
+import { Card, CardContent } from "../ui/card";
+import { Badge } from "../ui/badge";
 
 interface ListingCardProps {
   listing: Listing;

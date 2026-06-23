@@ -1,5 +1,5 @@
-import { db } from "../index.js";
-import { testimonials } from "../schema.js";
+import { db } from "../index";
+import { testimonials } from "../schema";
 import { and, eq, or, desc } from "drizzle-orm";
 
 export async function getActiveTestimonials(template: string) {

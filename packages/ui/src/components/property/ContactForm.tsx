@@ -2,11 +2,11 @@
 
 import { useState, useTransition } from "react";
 import { Send, CheckCircle } from "lucide-react";
-import { cn } from "../../lib/utils.js";
-import { Button } from "../ui/button.js";
-import { Input } from "../ui/input.js";
-import { Textarea } from "../ui/textarea.js";
-import { Label } from "../ui/label.js";
+import { cn } from "../../lib/utils";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { Label } from "../ui/label";
 
 interface ContactFormProps {
   action: (data: FormData) => Promise<{ success: boolean; message: string }>;

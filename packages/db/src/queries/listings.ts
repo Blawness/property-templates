@@ -1,5 +1,5 @@
-import { db } from "../index.js";
-import { listings, agents } from "../schema.js";
+import { db } from "../index";
+import { listings, agents } from "../schema";
 import { eq, and, or, ilike, gte, lte, sql, desc } from "drizzle-orm";
 
 export async function getListings(filters: {

@@ -1,5 +1,5 @@
-import { db } from "../index.js";
-import { agents } from "../schema.js";
+import { db } from "../index";
+import { agents } from "../schema";
 import { eq } from "drizzle-orm";
 
 export async function getActiveAgents() {

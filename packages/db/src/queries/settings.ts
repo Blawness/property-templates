@@ -1,5 +1,5 @@
-import { db } from "../index.js";
-import { siteSettings } from "../schema.js";
+import { db } from "../index";
+import { siteSettings } from "../schema";
 import { eq } from "drizzle-orm";
 
 export async function getSiteSettings(template: string) {

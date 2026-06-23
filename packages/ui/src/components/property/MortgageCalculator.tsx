@@ -2,10 +2,10 @@
 
 import { useState, useMemo } from "react";
 import { Calculator } from "lucide-react";
-import { cn, formatPrice } from "../../lib/utils.js";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card.js";
-import { Input } from "../ui/input.js";
-import { Label } from "../ui/label.js";
+import { cn, formatPrice } from "../../lib/utils";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
 
 interface MortgageCalculatorProps {
   propertyPrice: number | string;
