@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useCallback, useTransition } from "react";
+import { useCallback, useRef, useTransition } from "react";
 import { Search, X } from "lucide-react";
 import { cn } from "../../lib/utils.js";
 import type { SearchFilters } from "../../types.js";
@@ -25,6 +25,7 @@ export function SearchFilter({ cities, className, basePath = "" }: SearchFilterP
   const router = useRouter();
   const searchParams = useSearchParams();
   const [isPending, startTransition] = useTransition();
+  const timerRef = useRef<NodeJS.Timeout>();
 
   const updateFilters = useCallback(
     (updates: Partial<SearchFilters>) => {
@@ -61,8 +62,8 @@ export function SearchFilter({ cities, className, basePath = "" }: SearchFilterP
             defaultValue={searchParams.get("search") ?? ""}
             className="pl-9"
             onChange={(e) => {
-              const timer = setTimeout(() => updateFilters({ search: e.target.value }), 300);
-              return () => clearTimeout(timer);
+              clearTimeout(timerRef.current);
+              timerRef.current = setTimeout(() => updateFilters({ search: e.target.value }), 300);
             }}
           />
         </div>
