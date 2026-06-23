@@ -10,6 +10,7 @@
     "db:push": { "cache": false },
     "db:generate": { "cache": false },
     "db:migrate": { "cache": false },
-    "db:seed": { "cache": false }
+    "db:seed": { "cache": false },
+    "test": { "cache": false }
   }
 }
